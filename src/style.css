@@ -349,10 +349,9 @@ svg {
 }
 
 .step__text {
-  font-size: 2rem;
+  font-size: .8rem;
   color: var(--color-white);
   height: 2rem;
-  font-size: .5rem;
 }
 
 .project__container {
@@ -374,10 +373,6 @@ svg {
   margin: -2.3rem;
 }
 
-.featured__container {
-  overflow-x: hidden;
-}
-
 .featured__menu {
   justify-content: space-between;
   align-items: center;
@@ -397,32 +392,42 @@ svg {
   gap: 2rem;
   cursor: grab;
   user-select: none;
-}
-
-.featured__items:active {
-  cursor: grabbing;
+  overflow-x: hidden;
 }
 
 .featured__item {
+  display: flex;
+  flex-direction: column;
   height: 28rem;
   aspect-ratio: 42/61;
   background-image: linear-gradient(to top, black 11%, transparent 100%), url("https://picsum.photos/id/237/200/300");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: .5rem;
-  text-align: end;
-  align-items: end;
+  justify-content: end;
+  align-items: center;
   min-width: 250px;
   /* Set a fixed width to make horizontal scrolling visible */
   flex-shrink: 0;
   /* Prevent items from shrinking */
 }
 
+.featured__item p {
+  margin-bottom: 1rem;
+}
+
 .explore__text {
   margin-top: 1rem;
   justify-content: end;
+  align-items: center;
   gap: .5rem;
   cursor: pointer;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.explore__text svg {
+  fill: var(--color-secondary);
 }
 
 @media (min-width: 768px) {
