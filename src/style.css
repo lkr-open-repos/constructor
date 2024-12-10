@@ -57,7 +57,7 @@ body {
   font-family: var(--font-general);
   font-weight: var(--font-weight-regular);
   background-color: black;
-  color: var(--color-text-primary);
+  color: var(--color-white);
 }
 
 h1,
@@ -101,6 +101,7 @@ p {
 }
 
 section {
+  display: flex;
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
@@ -204,7 +205,7 @@ svg {
 .menu__item a {
   text-decoration: none;
   color: var(--color-white);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -219,10 +220,11 @@ svg {
   align-items: center;
   justify-content: center;
   aspect-ratio: 2;
-  background: linear-gradient(to right, black 11%, transparent 100%), url("./public/jason-richard-Hlhc8gQUW6I-unsplash.jpg");
+  background: linear-gradient(to right, black 11%, transparent 100%), url("./jason-richard-Hlhc8gQUW6I-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 2rem;
 }
 
 .hero__content {
@@ -246,22 +248,22 @@ svg {
   margin-bottom: 2rem;
 }
 
+.experience {
+  padding: 2rem 4rem;
+  background-color: var(--color-bg-secondary);
+}
+
 .experience__numbers {
   justify-content: space-between;
   align-items: center;
-  margin-left: 4rem;
-  gap: 2rem;
-}
-
-.experience__numbers,
-.experience__why-us {
-  width: 100%;
 }
 
 .experience__item {
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1px;
 }
 
 .experience__number {
@@ -289,6 +291,140 @@ svg {
   min-height: 1rem;
 }
 
+.letter__container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-color: var(--color-bg-secondary);
+}
+
+.letter__image-wrapper {
+  height: 20rem;
+}
+
+.letter__image {
+  height: 100%;
+}
+
+.letter__title {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+}
+
+.letter__title--highlight {
+  color: var(--color-primary);
+  display: block;
+}
+
+.letter__text {
+  letter-spacing: .03rem;
+  margin: 2rem auto;
+}
+
+.project {
+  background-color: var(--color-primary);
+}
+
+.plans {
+  align-items: center;
+  justify-content: center;
+}
+
+.plan__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  margin-bottom: 2rem;
+  gap: 0;
+}
+
+.plan__text {
+  height: 5rem;
+  font-size: .8rem;
+  line-height: .9rem;
+}
+
+.step__text {
+  font-size: 2rem;
+  color: var(--color-white);
+  height: 2rem;
+  font-size: .5rem;
+}
+
+.project__container {
+  flex-direction: column;
+}
+
+.plan__dot {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  margin-top: .5rem;
+  box-shadow: 0px 0px .5rem .5rem #ffffff88;
+}
+
+.plan__line {
+  height: .1rem;
+  background-color: var(--color-white);
+  margin: -2.3rem;
+}
+
+.featured__container {
+  overflow-x: hidden;
+}
+
+.featured__menu {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.featured__menu__items {
+  display: none;
+}
+
+.featured__title {
+  color: var(--color-secondary);
+}
+
+.featured__items {
+  margin-top: 2rem;
+  gap: 2rem;
+  cursor: grab;
+  user-select: none;
+}
+
+.featured__items:active {
+  cursor: grabbing;
+}
+
+.featured__item {
+  height: 28rem;
+  aspect-ratio: 42/61;
+  background-image: linear-gradient(to top, black 11%, transparent 100%), url("https://picsum.photos/id/237/200/300");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: .5rem;
+  text-align: end;
+  align-items: end;
+  min-width: 250px;
+  /* Set a fixed width to make horizontal scrolling visible */
+  flex-shrink: 0;
+  /* Prevent items from shrinking */
+}
+
+.explore__text {
+  margin-top: 1rem;
+  justify-content: end;
+  gap: .5rem;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .button {
     display: flex;
@@ -302,7 +438,9 @@ svg {
     display: flex;
   }
 
-
+  .plan__text {
+    height: 3rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -316,22 +454,39 @@ svg {
   }
 
   .experience__numbers {
-    width: 50%;
+    width: 45%;
   }
 
   .experience__why-us {
-    width: 50%;
+    width: 55%;
     margin: 0 2rem;
   }
 
-  .experience {
-    margin-top: -8rem;
+  .experience__why-us__content {
+    border-radius: .5rem;
+  }
+
+  .experience__numbers,
+  .experience__why-us {
+    margin-top: -12rem;
   }
 
   .experience__numbers {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .letter__container {
+    flex-direction: row;
+  }
+
+  .featured__menu__items {
+    display: flex;
+    gap: .5rem;
+    font-size: .8rem;
+  }
+
+
 
 }
 
@@ -340,4 +495,12 @@ svg {
     font-size: 20px;
   }
 
+  .experience__numbers,
+  .experience__why-us {
+    margin-top: -8rem;
+  }
+
+  .plan__text {
+    height: 2rem;
+  }
 }
