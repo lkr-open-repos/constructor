@@ -97,6 +97,11 @@ p {
   gap: 1rem
 }
 
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
 .logo {
   font-family: var(--font-logo);
   color: var(--color-primary);
@@ -174,6 +179,7 @@ section {
   background-color: transparent;
   color: white;
   cursor: pointer;
+  border: none;
 }
 
 svg {
@@ -199,7 +205,7 @@ svg {
 .header__menu {
   list-style: none;
   display: none;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .menu__item {
@@ -209,7 +215,7 @@ svg {
 .menu__item a {
   text-decoration: none;
   color: var(--color-white);
-  font-size: 1.1rem;
+  font-size: .9rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -258,7 +264,8 @@ svg {
 }
 
 .experience__numbers {
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -274,6 +281,10 @@ svg {
   font-size: 2rem;
   font-weight: 600;
   color: var(--color-primary);
+}
+
+.experience__why-us {
+  width: 100%;
 }
 
 
@@ -466,7 +477,7 @@ svg {
 
 .testimonial__text-container {
   position: relative;
-  height: 9rem;
+  height: 13rem;
   margin-bottom: 1rem;
   width: 90%;
 }
@@ -564,12 +575,12 @@ svg {
 
 .testimonial__arrow--left {
   position: absolute;
-  left: -70px;
+  left: -55px;
 }
 
 .testimonial__arrow--right {
   position: absolute;
-  right: -70px;
+  right: -55px;
 }
 
 .contact__title {
@@ -585,7 +596,8 @@ svg {
 }
 
 .contact__features {
-  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
 .contact__features-item {
@@ -690,7 +702,7 @@ svg {
 }
 
 .footer__info {
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
 }
 
 .footer__info__about,
@@ -699,22 +711,6 @@ svg {
 .footer__info__links {
   flex-direction: column;
 
-}
-
-.footer__info__about {
-  width: 35%;
-}
-
-.footer__info__office {
-  width: 20%;
-}
-
-.footer__info__contact {
-  width: 20%;
-}
-
-.footer__info__links {
-  width: 15%;
 }
 
 .footer__info__text {
@@ -738,11 +734,19 @@ svg {
   .plan__text {
     height: 3rem;
   }
+
+  .testimonial__text-container {
+    height: 9rem
+  }
 }
 
 @media (min-width: 992px) {
   html {
     font-size: 18px;
+  }
+
+  .header__menu {
+    gap: 1.5rem;
   }
 
   .experience {
@@ -785,6 +789,12 @@ svg {
 
   .testimonial__text-container {
     width: 70%;
+    height: 9rem;
+  }
+
+  .contact__features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
   }
 
   .contact__methods {
@@ -806,11 +816,27 @@ svg {
     height: 2.5rem;
   }
 
+  .testimonial__arrow--right {
+    right: -70px;
+  }
+
+  .testimonial__arrow--left {
+    left: -70px;
+  }
+
+  .footer__info {
+    grid-template-columns: 3fr 2fr 1fr 1fr;
+  }
+
 }
 
 @media (min-width: 1200px) {
   html {
     font-size: 20px;
+  }
+
+  .header__menu {
+    gap: 2rem;
   }
 
   .experience__numbers,
