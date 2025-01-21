@@ -292,7 +292,7 @@ svg {
   background-color: var(--color-primary);
   color: var(--color-white);
   gap: 1rem;
-  padding: 3rem;
+  padding: 3rem 1rem;
   width: 100%;
   border-radius: .5rem;
 }
@@ -735,6 +735,10 @@ svg {
     height: 3rem;
   }
 
+  .experience__why-us__content {
+    padding: 3rem;
+  }
+
   .testimonial__text-container {
     height: 9rem
   }
@@ -747,6 +751,10 @@ svg {
 
   .header__menu {
     gap: 1.5rem;
+  }
+
+  .header__menu a {
+    font-size: 1rem;
   }
 
   .experience {
@@ -837,6 +845,10 @@ svg {
 
   .header__menu {
     gap: 2rem;
+  }
+
+  .header__menu a {
+    font-size: 1.1rem;
   }
 
   .experience__numbers,
